@@ -118,4 +118,6 @@ Negative look-behind (?<!pattern): Matches the current position if it is not pre
 
 ## Author
 
+GitHub: justjulieta
 
+Repo of this turtorial: https://github.com/justjulieta/tutorial

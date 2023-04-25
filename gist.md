@@ -106,7 +106,15 @@ Non-word boundary (\B): Matches the position where there is no word boundary. Fo
 A back-reference is a way to match a previously captured group within the same regex pattern. Back-references are denoted by a backslash () followed by the number of the capturing group you want to reference, such as \1, \2, \3, and so on.
 
 ## Look-ahead and Look-behind
+These assertions are zero-width assertions that allow you to match patterns that are followed by or preceded by certain other patterns, without actually including those patterns in the match.
 
+Positive look-ahead (?=pattern): Matches the current position if it is followed by pattern. For example, the regex pattern "foo(?=bar)" will match "foo" only if it is followed by "bar".
+
+Negative look-ahead (?!pattern): Matches the current position if it is not followed by pattern. For example, the regex pattern "foo(?!bar)" will match "foo" only if it is not followed by "bar".
+
+Positive look-behind (?<=pattern): Matches the current position if it is preceded by pattern. For example, the regex pattern "(?<=foo)bar" will match "bar" only if it is preceded by "foo".
+
+Negative look-behind (?<!pattern): Matches the current position if it is not preceded by pattern. For example, the regex pattern "(?<!foo)bar" will match "bar" only if it is not preceded by "foo".
 
 ## Author
 

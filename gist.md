@@ -60,19 +60,54 @@ Dash (-) range character class: This character class allows you to specify a ran
 
 
 ## Flags
+Flags are special options that modify the behavior of the regex pattern. They are added after the closing delimiter of the pattern and are denoted by a single letter.
 
+Examples:
+
+Case-insensitive flag (i): This flag makes the regex pattern case-insensitive. For example, the regex "/hello/i" will match both "hello" and "HELLO".
+
+Global flag (g): This flag allows the regex pattern to match all occurrences of a pattern in the input string, rather than just the first one. For example, the regex "/cat/g" will match all occurrences of the word "cat" in the input string.
 
 ## Grouping and Capturing
+grouping and capturing allows you to create subpatterns within your main pattern, which can then be referenced or manipulated separately.
 
+Examples:
+
+Parentheses ( ) for grouping: Parentheses can be used to group parts of a pattern together, allowing you to apply quantifiers or alternations to a subpattern. For example, the regex "(abc)+" will match one or more occurrences of the sequence "abc".
+
+Backreferences (\1, \2, etc.) for capturing: Backreferences allow you to refer to a matched subpattern later in the regex pattern. They are created by enclosing a subpattern in parentheses, and then referencing it using \1, \2, and so on. For example, the regex "([a-z])\1" will match any repeated letter, such as "ee" or "ll".
 
 ## Bracket Expressions
+These allow you to define a character set that matches any one of a set of characters. Bracket expressions are enclosed in square brackets [ ] and can contain:
+
+Character classes: Inside a bracket expression, you can use character classes to match any character that belongs to a particular class. For example, the regex "[aeiou]" matches any vowel character.
+
+Ranges: You can specify a range of characters using the hyphen (-) character. For example, the regex "[a-z]" matches any lowercase letter from "a" to "z".
 
 ## Greedy and Lazy Match
+These are two different ways of matching patterns that involve quantifiers like *, +, or ?. These quantifiers specify how many times a character or group of characters should be matched.
+
+Greedy matching: By default, regex patterns are greedy, which means they match as much of the input string as possible. For example, the regex pattern ".*" will match any number of characters, including the entire input string.
+
+Lazy matching: Lazy matching, also known as non-greedy or reluctant matching, matches as little of the input string as possible. This is done by appending a question mark (?) to the end of the quantifier. For example, the regex pattern ".*?" will match the smallest possible number of characters, even if it means not matching the entire input string.
 
 ## Boundaries
+There are four types of boundaries:
+
+Start of line (^): Matches the position at the beginning of a line.
+
+End of line ($): Matches the position at the end of a line.
+
+Word boundary (\b): Matches the position between a word character (as defined by the \w character class) and a non-word character. For example, the regex pattern "\bcat\b" will match the word "cat" but not "caterpillar".
+
+Non-word boundary (\B): Matches the position where there is no word boundary. For example, the regex pattern "\Bcat\B" will match the word "cat" if it appears in the middle of a word, but not at the beginning or end.
 
 ## Back-references
+A back-reference is a way to match a previously captured group within the same regex pattern. Back-references are denoted by a backslash () followed by the number of the capturing group you want to reference, such as \1, \2, \3, and so on.
 
 ## Look-ahead and Look-behind
 
+
 ## Author
+
+
